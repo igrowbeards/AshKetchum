@@ -1,5 +1,5 @@
 module.exports = function(robot) {
-	robot.hear(/robot/i, function(response) {
+	robot.hear(/killer robot me/i, function(response) {
 		function random()
 			{
 			    var text = "";
@@ -13,3 +13,5 @@ module.exports = function(robot) {
 		response.send("https://robohash.org/" + random());
 	});
 }
+
+
