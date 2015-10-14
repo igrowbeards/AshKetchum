@@ -1,5 +1,5 @@
 module.exports = function(robot) {
-	robot.respond(/who is ash_ketchum/i, function(response) {
+	robot.respond(/who is (?:ash|ash_ketchum|ashy)/i, function(response) {
 		robot.http('http://api.icndb.com/jokes/random?firstName=Ash&lastName=Ketchum')
 			.header('Accept', 'application/json')
 			.get()(function(err, res, body) {
