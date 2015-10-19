@@ -1,9 +1,9 @@
 var hellos, mornings;
-​
+
 hellos = ["Well hello there, %", "Hey %, Hello!", "Marnin', %", "Good day, %", "Good 'aye!, %"];
-​
+
 mornings = ["Good morning, %", "Good morning to you too, %", "Good day, %", "Good 'aye!, %"];
-​
+
 module.exports = function(robot) {
   robot.hear(/(hello|good( [d'])?ay(e)?)/i, function(msg) {
     var hello;
@@ -16,4 +16,3 @@ module.exports = function(robot) {
     return msg.send(hello.replace("%", msg.message.user.name));
   });
 };
-​
